@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Reverse Vending Machine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+  	<script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+</head>
+<body>
+	<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAFypvT7mZbjQTob8akHik9ncoCNXh3DlQ",
+    authDomain: "rvm-project-94b4d.firebaseapp.com",
+    projectId: "rvm-project-94b4d",
+    storageBucket: "rvm-project-94b4d.appspot.com",
+    messagingSenderId: "321194782542",
+    appId: "1:321194782542:web:3b176d534c6155bcb3f81f",
+    measurementId: "G-SKNBHZN0QN"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+   
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<!-- Brand/logo -->
+		<a class="navbar-brand">Register</a>
+		<!-- Links -->
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'index' %}">Home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'register' %}">Register</a>
+		    </li>
+		    <li class="nav-item">
+		     <a class="nav-link" href="http://127.0.0.1:8000/login">Login</a>
+		    </li>
+		    <li class="nav-item">
+		     <a class="nav-link" href="http://127.0.0.1:8000/display">Details</a>
+		    </li>
+		  </ul>
+	</nav>
+
+
+<div class="container">
+ <h1>Reverse Vending Machine</h1>
+ <p><b><font color="gray">A reverse vending machine is a device that accepts used (empty) beverage containers and returns money to the user. The machines are popular in places that have mandatory recycling laws or container deposit legislation. In some places such as in the United States, bottlers paid funds into a centralized pool to be disbursed to people who recycled the containers. Any excess funds were to be used for general environmental cleanup, while distributors and bottlers make a profit whenever consumers fail to return the beverage containers. In other places, such as Norway, the state mandated that a vendor pay for recycled bottles, but left the system in the hands of private industry. In Finland, an excise tax is levied on beverage containers that don't belong to a container deposit system.</font></b>
+
+
+<h3>Operation</h3>
+File:Pantemaskin.webm
+Video clip showing a reverse vending machine 
+<br>
+<video width="320" height="240" controls>
+  <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/40/Pantemaskin.webm/Pantemaskin.webm.480p.vp9.webm" type="video/webm">
+  
+</video>
+<br>
+The recycler places the empty bottle or can into the receiving aperture; the horizontal in-feed system allows the user to insert containers one at a time. (An alternative system, found in many older machines, is one in which the user opens a door by hand and places the empty container in a pan. When the door is released and closed, the process continues.) The bottle or can is then automatically rotated; the bottle/can is then scanned by an omnidirectional UPC scanner, which scans the beverage container's UPC. Some systems use the container form, embossing, material or other identification parameters to match the container against the database in addition to or instead of the barcode.
+
+Once a container is scanned, identified (matched to database) and determined to be a participating container, it is processed and typically crushed (for one-time-use containers) to reduce its size, to avoid spillages of liquid and to increase storage capacity. Refillable containers are collected and sorted by hand to be brought back to the bottling company.
+
+<h3>History</h3>
+The first patent for a "Bottle Return and Handling Machine" was filed in the United States in 1920. The first working bottle return machine was invented and manufactured by Wicanders from Sweden used in the late 1950s. In 1962 an advanced automatic bottle return machine was designed by Aage Tveitan and manufactured in Norway by his company Arthur Tveitan AS.The first 3 in 1 machine was invented in 1994 by Kansmacker and is still in operation today in Detroit, Michigan.</p>
+
+ 
+</div>
+
+</body>
+</html>
+

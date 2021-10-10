@@ -1,0 +1,174 @@
+[debug] [2021-10-10T13:56:50.869Z] ----------------------------------------------------------------------
+[debug] [2021-10-10T13:56:50.882Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LAP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-10T13:56:50.884Z] CLI Version:   9.20.0
+[debug] [2021-10-10T13:56:50.885Z] Platform:      win32
+[debug] [2021-10-10T13:56:50.885Z] Node Version:  v16.11.0
+[debug] [2021-10-10T13:56:50.887Z] Time:          Sun Oct 10 2021 19:26:50 GMT+0530 (India Standard Time)
+[debug] [2021-10-10T13:56:50.891Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-10T13:56:50.979Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-10T13:56:50.981Z] > authorizing via signed-in user (thillakkumar2002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\LAP\Desktop\rvm\website\rvm
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-10-10T13:58:11.944Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-10-10T13:58:13.324Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-10-10T13:58:13.325Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project rvm-project-94b4d (RVM Project) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-10-10T13:58:17.813Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-10T13:58:17.815Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-10T13:58:18.372Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 10 Oct 2021 13:58:55 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-10T13:58:18.480Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/rvm-project-94b4d/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-10-10T13:58:20.679Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Oct 2021 13:58:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-10-10T13:58:20.695Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/rvm-project-94b4d/locations/-/instances/rvm-project-94b4d-default-rtdb  
+ 
+[debug] [2021-10-10T13:58:21.502Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Oct 2021 13:58:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-10-10T13:58:27.109Z] >>> HTTP REQUEST GET https://rvm-project-94b4d-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-10-10T13:58:28.957Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Oct 2021 13:59:05 GMT","content-type":"application/json; charset=utf-8","content-length":"60","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  Database Rules for rvm-project-94b4d-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-10-10T13:58:35.045Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-10-10T13:58:35.526Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-10-10T13:58:35.527Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.1.2","browserURL":"https://www.gstatic.com/firebasejs/9.1.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.1.2/firebase.tgz"},"live":{"version":"9.1","browserURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.1.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.1.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.1.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.1.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.1.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.1.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.1.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\LAP\Desktop\rvm\website\rvm is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=253658264&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-10T14:04:23.207Z] ----------------------------------------------------------------------
+[debug] [2021-10-10T14:04:23.213Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LAP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-10T14:04:23.214Z] CLI Version:   9.20.0
+[debug] [2021-10-10T14:04:23.215Z] Platform:      win32
+[debug] [2021-10-10T14:04:23.215Z] Node Version:  v16.11.0
+[debug] [2021-10-10T14:04:23.217Z] Time:          Sun Oct 10 2021 19:34:23 GMT+0530 (India Standard Time)
+[debug] [2021-10-10T14:04:23.218Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-10T14:04:23.240Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-10T14:04:23.242Z] > authorizing via signed-in user (thillakkumar2002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\LAP\Desktop\rvm\website\rvm
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-10-10T14:09:15.168Z] > refreshing access token with scopes: []
+[debug] [2021-10-10T14:09:15.169Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-10T14:09:15.796Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 10 Oct 2021 14:09:52 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-10T14:09:15.889Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-10-10T14:09:16.980Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-10-10T14:09:16.981Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project rvm-project-94b4d (RVM Project) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-10-10T14:09:19.940Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-10T14:09:19.941Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-10T14:09:20.432Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 10 Oct 2021 14:09:57 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-10T14:09:20.549Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/rvm-project-94b4d/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-10-10T14:09:23.028Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Oct 2021 14:09:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-10-10T14:09:23.038Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/rvm-project-94b4d/locations/-/instances/rvm-project-94b4d-default-rtdb  
+ 
+[debug] [2021-10-10T14:09:24.307Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 10 Oct 2021 14:10:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-10-10T14:09:30.859Z] >>> HTTP REQUEST GET https://rvm-project-94b4d-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-10-10T14:09:32.622Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 10 Oct 2021 14:10:09 GMT","content-type":"application/json; charset=utf-8","content-length":"60","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  Database Rules for rvm-project-94b4d-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-10-10T14:09:39.533Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-10-10T14:09:39.968Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-10-10T14:09:39.969Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.1.2","browserURL":"https://www.gstatic.com/firebasejs/9.1.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.1.2/firebase.tgz"},"live":{"version":"9.1","browserURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.1.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.1.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.1.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.1.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.1.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.1.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.1.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.1.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\LAP\Desktop\rvm\website\rvm is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=343499233&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-10T14:09:48.236Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"ec6a0e2d0dd524b4030c","redirect_uri":"http://localhost:9005","state":"343499233"}
+[debug] [2021-10-10T14:09:48.763Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sun, 10 Oct 2021 14:10:25 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"e07c19ed92f62e8581e85335b41b79ac\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com viewscreen-lab.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/ github.com/socket-worker-0af8a29d.js gist.github.com/socket-worker-0af8a29d.js","x-github-request-id":"C614:7D05:B5AE93:D22227:6162F451"}
+[debug] [2021-10-10T14:09:48.779Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-10-10T14:09:49.591Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-10-10T14:09:49.592Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Thillak-kumar","id":69104052,"node_id":"MDQ6VXNlcjY5MTA0MDUy","avatar_url":"https://avatars.githubusercontent.com/u/69104052?v=4","gravatar_id":"","url":"https://api.github.com/users/Thillak-kumar","html_url":"https://github.com/Thillak-kumar","followers_url":"https://api.github.com/users/Thillak-kumar/followers","following_url":"https://api.github.com/users/Thillak-kumar/following{/other_user}","gists_url":"https://api.github.com/users/Thillak-kumar/gists{/gist_id}","starred_url":"https://api.github.com/users/Thillak-kumar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Thillak-kumar/subscriptions","organizations_url":"https://api.github.com/users/Thillak-kumar/orgs","repos_url":"https://api.github.com/users/Thillak-kumar/repos","events_url":"https://api.github.com/users/Thillak-kumar/events{/privacy}","received_events_url":"https://api.github.com/users/Thillak-kumar/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2020-08-02T08:00:40Z","updated_at":"2021-10-10T14:02:52Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Thillak-kumar 
+[info] 
+[debug] [2021-10-10T14:09:57.743Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2021-10-10T14:09:58.322Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2021-10-10T14:09:58.323Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-10-10T14:10:02.420Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2021-10-10T14:10:02.991Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2021-10-10T14:10:02.992Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-10-10T14:10:07.085Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2021-10-10T14:10:07.830Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2021-10-10T14:10:07.831Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}

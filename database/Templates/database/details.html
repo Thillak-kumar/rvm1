@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Details</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+  	<script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+</head>
+<body>
+
+<div id="toolbar"><form id="changelist-search" method="post" action="{% url 'search'%}">
+	{% csrf_token %}
+<div>
+<label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search"></label>
+<input type="text" size="40" name="q" value="" placeholder="Roll_No" id="searchbar" autofocus>
+<input type="submit" value="Search"></div></form></div>
+	<div class="container mt-5">
+		<h2 class="alert alert-primary text-center">Display Data</h2>
+		
+		<table class="table table-bordered table-hover table-stripped bg-light">
+			<thead>
+				<tr class="bg-info">
+					<th>S.No</th>
+					<th>Name</th>
+					<th>Roll_No</th>
+					<th>credits</th>
+					<th>credits_used</th>
+					<th colspan="2">Operations</th>
+				</tr>
+				<tbody>
+					{% for i in data %}
+					<tr>
+						<td>{{i.id}}</td>
+						<td>{{i.Name}}</td>
+						<td>{{i.Roll_No}}</td>
+						<td>{{i.credits}}</td>
+						<td>{{i.credits_used}}</td>
+						<td><a href="{% url 'update' i.id %}" class="btn btn-outline-success">Update</a></td>
+						<td><a href="{% url 'delete' i.id %}" class="btn btn-outline-danger">Delete</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</thead>
+
+		</table>
+	<form class="box" action="{% url 'home' %}" >
+
+  
+  <input  type="submit" name="" value="Logout">
+  
+</form>
+
+
+ <style type="text/css">
+	.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+</style>
+
+
+</style>
+
+</body>
+</html> 

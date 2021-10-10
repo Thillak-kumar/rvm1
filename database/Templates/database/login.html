@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+  	<script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<!-- Brand/logo -->
+		<a class="navbar-brand">Register</a>
+		<!-- Links -->
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'home' %}">Home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'register' %}">Register</a>
+		    </li>
+		    <li class="nav-item">
+		     <a class="nav-link" href="http://127.0.0.1:8000/login">Login</a>
+		    </li>
+		    <li class="nav-item">
+		     <a class="nav-link" href="http://127.0.0.1:8000/display">Details</a>
+		    </li>
+		  </ul>
+	</nav>
+
+
+ 
+
+<div class="card mt-5 col-md-7 mx-auto p-2 ">
+    <h2 class="bg-info text-white text-center mx-2 my-2 p-2 border-rounded">Login Here...</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group mx-3">
+          <br>  <input type="text" name="username" class="form-control" placeholder="Enter Username"><br>
+            <input type="password" name="password" class="form-control " placeholder="Enter password">
+            <input type="submit" value="Login" class="form-control btn btn-info btn-block mt-2">
+        </div>
+    </form>
+</div>
+
+
+
+</div>
+</body>
+
+</body>
+</html>

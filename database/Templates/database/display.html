@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Details</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+  	<script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<!-- Brand/logo -->
+		<a class="navbar-brand">Register</a>
+		<!-- Links -->
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'index' %}">Home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'register' %}">Register</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{% url 'login' %}">Login</a>
+		    </li>
+		  </ul>
+	</nav>
+
+	<div class="container mt-5">
+		<h2 class="alert alert-primary text-center">Display Data</h2>
+		
+		<table class="table table-bordered table-hover table-stripped bg-light">
+			<thead>
+				<tr class="bg-info">
+					<th>S.No</th>
+					<th>Name</th>
+					<th>Roll_No</th>
+					<th>credits</th>
+					<th>credits_used</th>
+									</tr>
+				<tbody>
+					{% for id in data %}
+					<tr>
+						<td>{{id.id}}</td>
+						<td>{{id.Name}}</td>
+						<td>{{id.Roll_No}}</td>
+						<td>{{id.credits}}</td>
+						<td>{{id.credits_used}}</td>
+						
+					</tr>
+					{% endfor %}
+				</tbody>
+			</thead>
+
+		</table>
+	
+
+</body>
+</html> 
